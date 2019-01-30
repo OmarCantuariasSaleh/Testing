@@ -1,0 +1,31 @@
+
+    <div class="col s12 m6">
+      <div class="card teal darken-3">
+        <div class="card-content white-text">
+          <span class="card-title">{{ title1 }}</span>
+            {% if valorDolar %}
+                <p> $ {{ valorDolar }}</p>
+            {% endif %}
+            {% if jsonListDOLAR %}
+
+                <ul class="collapsible teal">
+                  <li>
+                    <div class="collapsible-header teal">
+                        Dolar entre {{fecha1}} y {{fecha2}}
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                        <ul class="collection">
+                            {% for Dolar in jsonListDOLAR %}
+                            <li class="collection-item teal darken-2">Valor : {{Dolar.Valor}} Fecha: {{Dolar.Fecha}}</li>
+                            {% endfor %}
+                        </ul>
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+

@@ -1,0 +1,31 @@
+
+    <div class="col s12 m6">
+      <div class="card pink accent-4">
+        <div class="card-content white-text">
+          <span class="card-title">{{ title2 }}</span>
+            {% if valorUf %}
+                <p> $ {{ valorUf }}</p>
+            {% endif %}
+            {% if jsonListUF %}
+
+                <ul class="collapsible pink">
+                  <li>
+                    <div class="collapsible-header pink">
+                        UF entre {{fecha1}} y {{fecha2}}
+                    </div>
+                    <div class="collapsible-body">
+                        <p>
+                        <ul class="collection">
+                            {% for UF in jsonListUF %}
+                            <li class="collection-item pink darken-2">Valor : {{UF.Valor}} Fecha: {{UF.Fecha}}</li>
+                            {% endfor %}
+                        </ul>
+                        </p>
+                    </div>
+                  </li>
+                </ul>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>

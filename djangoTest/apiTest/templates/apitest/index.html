@@ -1,0 +1,44 @@
+{% extends 'apitest/layout.html' %}
+
+{% block content %}
+<div class="container center-align">
+    <h3 class="center-align blue lighten-3">{{title1}}</h3>
+    <div class="row">
+      {% include 'apitest/dolarHoy.html' %}{% include 'apitest/unidadFomento.html' %}
+    </div>
+</div>
+{% endblock %}
+
+{% block formDolar %}
+<div class="container center-align">
+  <div class="row">
+
+    <div class="card-panel center-align brown lighten-4">
+        <form action="/dolaryears" method="GET">
+            <div class="input-field col s12 m6 ">
+                <input name="Primero" id="Primero" type="text" class="datepicker">
+                <label for="Primero">Fecha 1</label>
+            </div>
+            <div class="input-field col s12 m6">
+                <input name="Segundo" id="Segundo" type="text" class="datepicker">
+                <label for="Segundo">Fecha 2</label>
+            </div>
+           <p> <input type="submit" value="listar"></p>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block jsScripts %}
+    <script>
+          $(document).ready(function(){
+                $('.datepicker').datepicker({
+                    format: 'yyyy/mm'
+                });
+                $('.collapsible').collapsible();
+          });
+
+
+    </script>
+{% endblock %}

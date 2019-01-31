@@ -1,1 +1,1 @@
-web: gunicorn Testing.wsgi
+web: gunicorn prueba-django-postulacion.wsgi

@@ -1,1 +1,1 @@
-web: gunicorn djangoTest.wsgi
+web: gunicorn Testing.wsgi

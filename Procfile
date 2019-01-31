@@ -1,1 +1,1 @@
-web: gunicorn prueba-django-postulacion.wsgi
+web: gunicorn apiTest.wsgi --log-file - 

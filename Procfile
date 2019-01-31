@@ -1,1 +1,1 @@
-web: gunicorn djangoTest.djangoTest.wsgi --log-file - 
+web: gunicorn djangoTest.wsgi:apiTest --log-file - 
